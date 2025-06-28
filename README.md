@@ -170,7 +170,7 @@ Esta opción finaliza la ejecución del programa.
 * **Resultados**:
     * El programa mostrará un mensaje de despedida y se cerrará.
 
- 6. Consideraciones Adicionales
+Consideraciones Adicionales
 
 * **Validación de Entradas**: El programa incluye validaciones básicas para asegurarse de que los datos ingresados sean del tipo correcto y cumplan con ciertos requisitos (ej. edad positiva, notas entre 0 y 5, mínimo 3 notas).
 * **Permanencia de Datos**: Los datos de los estudiantes se almacenan en la memoria mientras el programa se está ejecutando. Si el programa se cierra, todos los datos se perderán. Para una aplicación real, se necesitaría implementar almacenamiento persistente (por ejemplo, en un archivo o base de datos).
