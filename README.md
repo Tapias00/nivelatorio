@@ -161,7 +161,7 @@ Esta opción muestra una lista de todos los estudiantes actualmente registrados 
     -----------------------------------
     ```
 
- 5.6. 6. Salir
+ 6. Salir
 
 Esta opción finaliza la ejecución del programa.
 
