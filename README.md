@@ -1,4 +1,44 @@
- Manual de Usuario - Sistema de Gestión de Estudiantes
+# ... existing code ...
+def input_number_in_range(prompt, min_value, max_value, is_float=False):
+    while True:
+        try:
+            value = input(prompt)
+            value = float(value) if is_float else int(value)
+            if value < min_value or value > max_value:
+                print(f"Value must be between {min_value} and {max_value}.")
+                continue
+            return value
+        except ValueError:
+            print("Invalid number. Please try again.")
+# ... existing code ...
+def register_sale():
+    print("\n--- Register Sale ---")
+    client = input_non_empty("Client name: ")
+    title = input_non_empty("Product title: ")
+    product = find_product(title)
+    if not product:
+        print("Product not found.")
+        return
+    if product["stock"] == 0:
+        print("No stock available for this product.")
+        return
+    quantity = input_positive_number("Quantity: ")
+    if quantity > product["stock"]:
+        print("Insufficient stock.")
+        return
+    discount = input_number_in_range("Discount percentage (0-100, 0 if none): ", 0, 100, is_float=True)
+    date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    sale = {
+        "client": client,
+        "product_title": product["title"],
+        "quantity": quantity,
+        "date": date,
+        "discount": discount
+    }
+    sales.append(sale)
+    product["stock"] -= quantity
+    print("Sale registered successfully.")
+# ... existing code ... Manual de Usuario - Sistema de Gestión de Estudiantes
 
 Este manual describe cómo utilizar el programa de gestión de información académica para estudiantes.
 
